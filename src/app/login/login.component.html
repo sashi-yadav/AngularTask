@@ -1,0 +1,14 @@
+<div class="ui main text container">
+<form class="ui medium form segment">
+    <h3 class="ui header">LOGIN</h3>
+    <div class="field">
+      <label for="userName">User Name:</label>
+      <input type="text" id="userName" #userName>
+    </div>
+    <div class="field">
+      <label for="password">Password:</label>
+      <input type="password" id="password" #password>
+    </div>
+    <button class="ui positive left floated button" (click)="login(userName.value,password.value)">LOGIN</button>
+</form>
+</div>

@@ -1,0 +1,21 @@
+<table class="ui compact celled definition table" style="padding : 10px">
+  <thead class="full-width">
+    <tr>
+      <th>Description</th>
+      <th>Remark</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of records">
+      <td>{{record.description}}</td>
+      <td>{{record.remark}}</td>
+    </tr>
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th colspan="4">
+        <button class="ui positive right floated button" (click)="add()">Add Ticket</button>
+      </th>
+    </tr>
+  </tfoot>
+</table>

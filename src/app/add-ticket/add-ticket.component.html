@@ -1,0 +1,13 @@
+<div class="ui main text container">
+<form class="ui medium form segment">
+  <div class="field">
+    <label>Description</label>
+    <input type="text" name="Description" placeholder="Enter Ticket Description" #description>
+  </div>
+  <div class="field">
+    <label>Remark</label>
+    <input type="text" name="Remark" placeholder="Enter Ticket Remark" #remark>
+  </div>
+  <button class="ui positive right floated button" type="submit" (click)="addTicket(description.value,remark.value)">Submit</button>
+</form>
+</div>
