@@ -1,12 +1,14 @@
 <table class="ui compact celled definition table" style="padding : 10px">
   <thead class="full-width">
     <tr>
+      <th>Id</th>
       <th>Description</th>
       <th>Remark</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let record of records">
+    <tr *ngFor="let record of records;let i=index">
+      <td>{{i+1}}</td>
       <td>{{record.description}}</td>
       <td>{{record.remark}}</td>
     </tr>

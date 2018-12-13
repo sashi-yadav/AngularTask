@@ -12,16 +12,18 @@ export class AddTicketComponent implements OnInit {
   constructor(private router: Router) { }
 
   record : Record[];
+  temp: string;
 
   ngOnInit() {
     this.record = [];
   }
   addTicket(description: string,remark: string){
-    debugger;
-    if(JSON.parse(localStorage.getItem("records"))){
-    this.record=JSON.parse(localStorage.getItem("records"));
+    this.temp=localStorage.getItem("records");
+    if(this.temp){
+    this.record=JSON.parse(this.temp);
     }
     this.record.push(new Record(description,remark));
     localStorage.setItem("records",JSON.stringify(this.record));
   }
 }
+  
